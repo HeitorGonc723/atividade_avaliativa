@@ -1,73 +1,103 @@
-# React + TypeScript + Vite
+# 💻 UtilyManager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Sobre
 
-Currently, two official plugins are available:
+Esse projeto foi desenvolvido como atividade prática usando **React + TypeScript + TailwindCSS**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A aplicação junta três funcionalidades simples em um só sistema:
 
-## React Compiler
+- Lista de tarefas  
+- Cadastro de contatos  
+- Controle financeiro  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Os dados ficam salvos no navegador usando LocalStorage.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🎓 Objetivo da Atividade
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Praticar conceitos como:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- React
+- TypeScript
+- Rotas com React Router
+- Formulários com React Hook Form
+- Validação com Zod
+- Componentização
+- Persistência de dados
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+A ideia foi aplicar tudo isso em uma aplicação funcional e organizada.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🏠 Página Inicial
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Tela principal com navegação para:
+
+- TaskMaster  
+- ConnectHub  
+- MoneyFlow  
+
+---
+
+## 📝 TaskMaster
+
+Funções:
+
+- Criar tarefas  
+- Escolher categoria  
+- Remover tarefas  
+- Marcar como concluída  
+- Validação de dados  
+- Salvamento automático no navegador  
+
+---
+
+## 👥 ConnectHub
+
+Funções:
+
+- Cadastro de contatos  
+- Validação de email  
+- Telefone apenas números  
+- Dados salvos no LocalStorage  
+
+---
+
+## 📊 MoneyFlow
+
+Funções:
+
+- Registrar entradas e saídas  
+- Informar descrição, valor e data  
+- Cálculo automático do saldo  
+- Validação dos campos  
+- Persistência no navegador  
+
+---
+
+## 📂 Estrutura do Projeto
+
+src/
+├── components/
+│ ├── Button
+│ ├── Input
+│ └── Navbar
+├── pages/
+│ ├── Home
+│ ├── TaskMaster
+│ ├── ConnectHub
+│ └── MoneyFlow
+├── schemas/
+│ ├── taskSchema
+│ ├── contactSchema
+│ └── financeSchema
+└── App.tsx
+
+
+---
+
+- Projeto desenvolvido para atividade prática da disciplina de React com TypeScript.
+- Curso: Tec Dev - RPV
+- Professor: Daniel Almeida
+- Aluno: Heitor Gonçalves Pereira
